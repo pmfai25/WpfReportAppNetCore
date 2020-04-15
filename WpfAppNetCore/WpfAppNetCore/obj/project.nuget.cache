@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "/gLJE/8Msd0VfLNvF64Hw3Gd2GlPFhoRKMjFytnZZnxtBPOzSvuPSouin0r0gsJe2W84uNcVpL1jWcRlzsOavg==",
+  "success": true,
+  "projectFilePath": "C:\\Mingtse\\VisualStudio2019\\WpfAppNetCore\\WpfAppNetCore\\WpfAppNetCore.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\yuka\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
