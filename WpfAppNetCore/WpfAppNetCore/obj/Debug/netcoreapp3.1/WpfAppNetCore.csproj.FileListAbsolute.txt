@@ -37,6 +37,7 @@ C:\Mingtse\VisualStudio2019\WpfAppNetCore\WpfAppNetCore\obj\Debug\netcoreapp3.1\
 C:\Mingtse\VisualStudio2019\WpfAppNetCore\WpfAppNetCore\obj\Debug\netcoreapp3.1\WpfAppNetCore.AssemblyInfo.cs
 C:\Mingtse\VisualStudio2019\WpfAppNetCore\WpfAppNetCore\obj\Debug\netcoreapp3.1\WpfAppNetCore.csproj.CopyComplete
 C:\Mingtse\VisualStudio2019\WpfAppNetCore\WpfAppNetCore\obj\Debug\netcoreapp3.1\WpfAppNetCore.dll
-C:\Mingtse\VisualStudio2019\WpfAppNetCore\WpfAppNetCore\obj\Debug\netcoreapp3.1\WpfAppNetCore.csprojAssemblyReference.cache
 C:\Mingtse\VisualStudio2019\WpfAppNetCore\WpfAppNetCore\obj\Debug\netcoreapp3.1\WpfAppNetCore.csproj.CoreCompileInputs.cache
 C:\Mingtse\VisualStudio2019\WpfAppNetCore\WpfAppNetCore\obj\Debug\netcoreapp3.1\WpfAppNetCore.genruntimeconfig.cache
+C:\Mingtse\VisualStudio2019\WpfAppNetCore\WpfAppNetCore\bin\Debug\netcoreapp3.1\sensors.json
+C:\Mingtse\VisualStudio2019\WpfAppNetCore\WpfAppNetCore\obj\Debug\netcoreapp3.1\WpfAppNetCore.csprojAssemblyReference.cache

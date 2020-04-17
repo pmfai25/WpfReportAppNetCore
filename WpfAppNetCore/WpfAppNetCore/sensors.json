@@ -1,0 +1,414 @@
+{
+  "TC-WI": {
+    "id": 8,
+    "title": "WI",
+    "sensors": [
+      {
+        "sensor_id": "R02",
+        "title": "溫度"
+      },
+      {
+        "sensor_id": "score",
+        "title": "健康分數"
+      },
+      {
+        "sensor_id": "duty",
+        "title": "運轉率"
+      }
+    ]
+  },
+  "TC-RI": {
+    "id": 9,
+    "title": "RI",
+    "sensors": [
+      {
+        "sensor_id": "R02",
+        "title": "溫度"
+      },
+      {
+        "sensor_id": "score",
+        "title": "健康分數"
+      },
+      {
+        "sensor_id": "duty",
+        "title": "運轉率"
+      }
+    ]
+  },
+  "TC-OC": {
+    "id": 7,
+    "title": "開放櫃",
+    "sensors": [
+      {
+        "sensor_id": "R02",
+        "title": "溫度"
+      },
+      {
+        "sensor_id": "score",
+        "title": "健康分數"
+      },
+      {
+        "sensor_id": "duty",
+        "title": "運轉率"
+      }
+    ]
+  },
+  "TC-OC18": {
+    "id": 10,
+    "title": "開放櫃18°Ｃ",
+    "sensors": [
+      {
+        "sensor_id": "R02",
+        "title": "溫度"
+      },
+      {
+        "sensor_id": "score",
+        "title": "健康分數"
+      },
+      {
+        "sensor_id": "duty",
+        "title": "運轉率"
+      }
+    ]
+  },
+  "TC-EC": {
+    "id": 11,
+    "title": "EC冷凍",
+    "sensors": [
+      {
+        "sensor_id": "R02",
+        "title": "溫度"
+      },
+      {
+        "sensor_id": "score",
+        "title": "健康分數"
+      },
+      {
+        "sensor_id": "duty",
+        "title": "運轉率"
+      }
+    ]
+  },
+  "TC-ICE": {
+    "id": 12,
+    "title": "臥櫃",
+    "sensors": [
+      {
+        "sensor_id": "R02",
+        "title": "溫度"
+      },
+      {
+        "sensor_id": "score",
+        "title": "健康分數"
+      },
+      {
+        "sensor_id": "duty",
+        "title": "運轉率"
+      }
+    ]
+  },
+  "TC-CHILD": {
+    "id": 13,
+    "title": "子櫃",
+    "sensors": [
+      {
+        "sensor_id": "R02",
+        "title": "溫度"
+      },
+      {
+        "sensor_id": "score",
+        "title": "健康分數"
+      },
+      {
+        "sensor_id": "duty",
+        "title": "運轉率"
+      }
+    ]
+  },
+  "TC-DRAWER": {
+    "id": 14,
+    "title": "抽屜小冰箱",
+    "sensors": [
+      {
+        "sensor_id": "R02",
+        "title": "溫度"
+      },
+      {
+        "sensor_id": "score",
+        "title": "健康分數"
+      },
+      {
+        "sensor_id": "duty",
+        "title": "運轉率"
+      }
+    ]
+  },
+  "TC-COFFEE": {
+    "id": 15,
+    "title": "咖啡小冰箱",
+    "sensors": [
+      {
+        "sensor_id": "R02",
+        "title": "溫度"
+      },
+      {
+        "sensor_id": "score",
+        "title": "健康分數"
+      },
+      {
+        "sensor_id": "duty",
+        "title": "運轉率"
+      }
+    ]
+  },
+  "TC-MILK": {
+    "id": 16,
+    "title": "牛奶小冰箱",
+    "sensors": [
+      {
+        "sensor_id": "R02",
+        "title": "溫度"
+      },
+      {
+        "sensor_id": "score",
+        "title": "健康分數"
+      },
+      {
+        "sensor_id": "duty",
+        "title": "運轉率"
+      }
+    ]
+  },
+  "TC-BENTO-DESK": {
+    "id": 17,
+    "title": "便當保溫桌上櫃",
+    "sensors": [
+      {
+        "sensor_id": "R02",
+        "title": "溫度"
+      },
+      {
+        "sensor_id": "score",
+        "title": "健康分數"
+      },
+      {
+        "sensor_id": "duty",
+        "title": "運轉率"
+      }
+    ]
+  },
+  "TC-BENTO": {
+    "id": 18,
+    "title": "便當保溫櫃",
+    "sensors": [
+      {
+        "sensor_id": "R02",
+        "title": "溫度"
+      },
+      {
+        "sensor_id": "score",
+        "title": "健康分數"
+      },
+      {
+        "sensor_id": "duty",
+        "title": "運轉率"
+      }
+    ]
+  },
+  "TC-EC-4C": {
+    "id": 19,
+    "title": "EC冷藏",
+    "sensors": [
+      {
+        "sensor_id": "R02",
+        "title": "溫度"
+      },
+      {
+        "sensor_id": "score",
+        "title": "健康分數"
+      },
+      {
+        "sensor_id": "duty",
+        "title": "運轉率"
+      }
+    ]
+  },
+  "TC-LIGHT-FOOD": {
+    "id": 20,
+    "title": "輕食櫃",
+    "sensors": [
+      {
+        "sensor_id": "R02",
+        "title": "溫度"
+      },
+      {
+        "sensor_id": "score",
+        "title": "健康分數"
+      },
+      {
+        "sensor_id": "duty",
+        "title": "運轉率"
+      }
+    ]
+  },
+  "TC-WORK-4C": {
+    "id": 21,
+    "title": "工作台冷藏冰箱",
+    "sensors": [
+      {
+        "sensor_id": "R02",
+        "title": "溫度"
+      },
+      {
+        "sensor_id": "score",
+        "title": "健康分數"
+      },
+      {
+        "sensor_id": "duty",
+        "title": "運轉率"
+      }
+    ]
+  },
+  "TC-WORK-ICE": {
+    "id": 22,
+    "title": "工作台冷凍冰箱",
+    "sensors": [
+      {
+        "sensor_id": "R02",
+        "title": "溫度"
+      },
+      {
+        "sensor_id": "score",
+        "title": "健康分數"
+      },
+      {
+        "sensor_id": "duty",
+        "title": "運轉率"
+      }
+    ]
+  },
+  "TC-CAKE": {
+    "id": 23,
+    "title": "蛋糕櫃",
+    "sensors": [
+      {
+        "sensor_id": "R02",
+        "title": "溫度"
+      },
+      {
+        "sensor_id": "score",
+        "title": "健康分數"
+      },
+      {
+        "sensor_id": "duty",
+        "title": "運轉率"
+      }
+    ]
+  },
+  "TC-SWEET-4C": {
+    "id": 24,
+    "title": "甜點櫃4℃",
+    "sensors": [
+      {
+        "sensor_id": "R02",
+        "title": "溫度"
+      },
+      {
+        "sensor_id": "score",
+        "title": "健康分數"
+      },
+      {
+        "sensor_id": "duty",
+        "title": "運轉率"
+      }
+    ]
+  },
+  "TC-SWEET-18C": {
+    "id": 25,
+    "title": "甜點櫃18℃",
+    "sensors": [
+      {
+        "sensor_id": "R02",
+        "title": "溫度"
+      },
+      {
+        "sensor_id": "score",
+        "title": "健康分數"
+      },
+      {
+        "sensor_id": "duty",
+        "title": "運轉率"
+      }
+    ]
+  },
+  "TC-2-TEMP": {
+    "id": 26,
+    "title": "雙溫櫃",
+    "sensors": [
+      {
+        "sensor_id": "R02",
+        "title": "溫度"
+      },
+      {
+        "sensor_id": "score",
+        "title": "健康分數"
+      },
+      {
+        "sensor_id": "duty",
+        "title": "運轉率"
+      }
+    ]
+  },
+  "TC-RI-4C": {
+    "id": 27,
+    "title": "RI冷藏",
+    "sensors": [
+      {
+        "sensor_id": "R02",
+        "title": "溫度"
+      },
+      {
+        "sensor_id": "score",
+        "title": "健康分數"
+      },
+      {
+        "sensor_id": "duty",
+        "title": "運轉率"
+      }
+    ]
+  },
+  "ACTRL": {
+    "id": 2,
+    "title": "外掛模組(空調、臥櫃、後場EC、咖啡、牛奶)",
+    "sensors": [
+      {
+        "sensor_id": "T1",
+        "title": "溫度"
+      }
+    ]
+  },
+  "DAO": {
+    "id": 3,
+    "title": "燈光",
+    "sensors": [
+      {
+        "sensor_id": "ch1,ch2,ch3,ch4",
+        "title": "室內亮度"
+      }
+    ]
+  },
+  "PA33": {
+    "id": 5,
+    "title": "電錶",
+    "sensors": [
+      {
+        "sensor_id": "PF",
+        "title": "功率因數"
+      },
+      {
+        "sensor_id": "kwh",
+        "title": "度數"
+      }
+    ]
+  }
+}

@@ -61,6 +61,18 @@ namespace WpfAppNetCore
         private bool _IsStoreReport = true;
         private DateTime _ReportDateFrom = DateTime.Today;
         private DateTime _ReportDateTo = DateTime.Today;
+        private ConfigDeviceTypes _DeviceTypes = new ConfigDeviceTypes();
+
+        public ConfigDeviceTypes DeviceTypes
+        {
+            get { return _DeviceTypes; }
+            set
+            {
+                _DeviceTypes = value;
+                // Call OnPropertyChanged whenever the property is updated
+                OnPropertyChanged();
+            }
+        }
 
         public ObservableCollection<MailUserInfo> userList
         {
@@ -288,10 +300,14 @@ namespace WpfAppNetCore
                     case "1":
                         sensorList.Clear();
 
-                        JsonConvert.DeserializeObject<List<stores_sensor>>($@"{ConfigurationManager.AppSettings["VisibaleSensors"]}").ToList().ForEach(z =>
-                        {
-                            sensorList.Add(new stores_sensor { id = z.id, sensor_id = z.sensor_id, title = z.title });
-                        });
+
+                        LoadDeciceTypeToMemory();
+
+
+                        //JsonConvert.DeserializeObject<List<stores_sensor>>($@"{ConfigurationManager.AppSettings["VisibaleSensors"]}").ToList().ForEach(z =>
+                        //{
+                        //    sensorList.Add(new stores_sensor { id = z.id, sensor_id = z.sensor_id, title = z.title });
+                        //});
                         break;
                 }
             }
@@ -303,6 +319,153 @@ namespace WpfAppNetCore
             return true;
         }
 
+        private void LoadDeciceTypeToMemory()
+        {
+            DeviceTypes.ACTRL.sensors.ForEach(z =>
+            {
+                if (sensorList.Where(x => x.sensor_id == z.sensor_id && x.title == z.title).FirstOrDefault() == null)
+                    sensorList.Add(new stores_sensor { sensor_id = z.sensor_id, title = z.title });
+            });
+
+            DeviceTypes.DAO.sensors.ForEach(z =>
+            {
+                if (sensorList.Where(x => x.sensor_id == z.sensor_id && x.title == z.title).FirstOrDefault() == null)
+                    sensorList.Add(new stores_sensor { sensor_id = z.sensor_id, title = z.title });
+            });
+
+            DeviceTypes.PA33.sensors.ForEach(z =>
+            {
+                if (sensorList.Where(x => x.sensor_id == z.sensor_id && x.title == z.title).FirstOrDefault() == null)
+                    sensorList.Add(new stores_sensor { sensor_id = z.sensor_id, title = z.title });
+            });
+
+            DeviceTypes.TC_2_TEMP.sensors.ForEach(z =>
+            {
+                if (sensorList.Where(x => x.sensor_id == z.sensor_id && x.title == z.title).FirstOrDefault() == null)
+                    sensorList.Add(new stores_sensor { sensor_id = z.sensor_id, title = z.title });
+            });
+
+            DeviceTypes.TC_BENTO.sensors.ForEach(z =>
+            {
+                if (sensorList.Where(x => x.sensor_id == z.sensor_id && x.title == z.title).FirstOrDefault() == null)
+                    sensorList.Add(new stores_sensor { sensor_id = z.sensor_id, title = z.title });
+            });
+
+            DeviceTypes.TC_BENTO_DESK.sensors.ForEach(z =>
+            {
+                if (sensorList.Where(x => x.sensor_id == z.sensor_id && x.title == z.title).FirstOrDefault() == null)
+                    sensorList.Add(new stores_sensor { sensor_id = z.sensor_id, title = z.title });
+            });
+
+            DeviceTypes.TC_CAKE.sensors.ForEach(z =>
+            {
+                if (sensorList.Where(x => x.sensor_id == z.sensor_id && x.title == z.title).FirstOrDefault() == null)
+                    sensorList.Add(new stores_sensor { sensor_id = z.sensor_id, title = z.title });
+            });
+
+            DeviceTypes.TC_CHILD.sensors.ForEach(z =>
+            {
+                if (sensorList.Where(x => x.sensor_id == z.sensor_id && x.title == z.title).FirstOrDefault() == null)
+                    sensorList.Add(new stores_sensor { sensor_id = z.sensor_id, title = z.title });
+            });
+
+            DeviceTypes.TC_COFFEE.sensors.ForEach(z =>
+            {
+                if (sensorList.Where(x => x.sensor_id == z.sensor_id && x.title == z.title).FirstOrDefault() == null)
+                    sensorList.Add(new stores_sensor { sensor_id = z.sensor_id, title = z.title });
+            });
+
+            DeviceTypes.TC_DRAWER.sensors.ForEach(z =>
+            {
+                if (sensorList.Where(x => x.sensor_id == z.sensor_id && x.title == z.title).FirstOrDefault() == null)
+                    sensorList.Add(new stores_sensor { sensor_id = z.sensor_id, title = z.title });
+            });
+
+            DeviceTypes.TC_EC.sensors.ForEach(z =>
+            {
+                if (sensorList.Where(x => x.sensor_id == z.sensor_id && x.title == z.title).FirstOrDefault() == null)
+                    sensorList.Add(new stores_sensor { sensor_id = z.sensor_id, title = z.title });
+            });
+
+            DeviceTypes.TC_EC_4C.sensors.ForEach(z =>
+            {
+                if (sensorList.Where(x => x.sensor_id == z.sensor_id && x.title == z.title).FirstOrDefault() == null)
+                    sensorList.Add(new stores_sensor { sensor_id = z.sensor_id, title = z.title });
+            });
+
+            DeviceTypes.TC_ICE.sensors.ForEach(z =>
+            {
+                if (sensorList.Where(x => x.sensor_id == z.sensor_id && x.title == z.title).FirstOrDefault() == null)
+                    sensorList.Add(new stores_sensor { sensor_id = z.sensor_id, title = z.title });
+            });
+
+            DeviceTypes.TC_LIGHT_FOOD.sensors.ForEach(z =>
+            {
+                if (sensorList.Where(x => x.sensor_id == z.sensor_id && x.title == z.title).FirstOrDefault() == null)
+                    sensorList.Add(new stores_sensor { sensor_id = z.sensor_id, title = z.title });
+            });
+
+            DeviceTypes.TC_MILK.sensors.ForEach(z =>
+            {
+                if (sensorList.Where(x => x.sensor_id == z.sensor_id && x.title == z.title).FirstOrDefault() == null)
+                    sensorList.Add(new stores_sensor { sensor_id = z.sensor_id, title = z.title });
+            });
+
+            DeviceTypes.TC_OC.sensors.ForEach(z =>
+            {
+                if (sensorList.Where(x => x.sensor_id == z.sensor_id && x.title == z.title).FirstOrDefault() == null)
+                    sensorList.Add(new stores_sensor { sensor_id = z.sensor_id, title = z.title });
+            });
+
+            DeviceTypes.TC_OC18.sensors.ForEach(z =>
+            {
+                if (sensorList.Where(x => x.sensor_id == z.sensor_id && x.title == z.title).FirstOrDefault() == null)
+                    sensorList.Add(new stores_sensor { sensor_id = z.sensor_id, title = z.title });
+            });
+
+            DeviceTypes.TC_RI.sensors.ForEach(z =>
+            {
+                if (sensorList.Where(x => x.sensor_id == z.sensor_id && x.title == z.title).FirstOrDefault() == null)
+                    sensorList.Add(new stores_sensor { sensor_id = z.sensor_id, title = z.title });
+            });
+
+            DeviceTypes.TC_RI_4C.sensors.ForEach(z =>
+            {
+                if (sensorList.Where(x => x.sensor_id == z.sensor_id && x.title == z.title).FirstOrDefault() == null)
+                    sensorList.Add(new stores_sensor { sensor_id = z.sensor_id, title = z.title });
+            });
+
+            DeviceTypes.TC_SWEET_18C.sensors.ForEach(z =>
+            {
+                if (sensorList.Where(x => x.sensor_id == z.sensor_id && x.title == z.title).FirstOrDefault() == null)
+                    sensorList.Add(new stores_sensor { sensor_id = z.sensor_id, title = z.title });
+            });
+
+            DeviceTypes.TC_SWEET_4C.sensors.ForEach(z =>
+            {
+                if (sensorList.Where(x => x.sensor_id == z.sensor_id && x.title == z.title).FirstOrDefault() == null)
+                    sensorList.Add(new stores_sensor { sensor_id = z.sensor_id, title = z.title });
+            });
+
+            DeviceTypes.TC_WI.sensors.ForEach(z =>
+            {
+                if (sensorList.Where(x => x.sensor_id == z.sensor_id && x.title == z.title).FirstOrDefault() == null)
+                    sensorList.Add(new stores_sensor { sensor_id = z.sensor_id, title = z.title });
+            });
+
+            DeviceTypes.TC_WORK_4C.sensors.ForEach(z =>
+            {
+                if (sensorList.Where(x => x.sensor_id == z.sensor_id && x.title == z.title).FirstOrDefault() == null)
+                    sensorList.Add(new stores_sensor { sensor_id = z.sensor_id, title = z.title });
+            });
+
+            DeviceTypes.TC_WORK_ICE.sensors.ForEach(z =>
+            {
+                if (sensorList.Where(x => x.sensor_id == z.sensor_id && x.title == z.title).FirstOrDefault() == null)
+                    sensorList.Add(new stores_sensor { sensor_id = z.sensor_id, title = z.title });
+            });
+        }
+
         public MainWindow()
         {
 
@@ -312,6 +475,16 @@ namespace WpfAppNetCore
             page4.Visibility = Visibility.Collapsed;
 
             this.DataContext = this;
+
+            //讀取sensors.json
+            string jsonFromFile;
+            using (var reader = new StreamReader("sensors.json"))
+            {
+                jsonFromFile = reader.ReadToEnd();
+                jsonFromFile = jsonFromFile.Replace("-", "_");
+            }
+            DeviceTypes = JsonConvert.DeserializeObject<ConfigDeviceTypes>(jsonFromFile);
+
 
         }
 
@@ -728,30 +901,36 @@ namespace WpfAppNetCore
                 {
                     baseGrid.IsEnabled = false;
                     #region 載入Device Type資料
-                    client = new HttpClient();
-
-                    var queryCondition = new QueryConditionDeviceType() { SensorId = ((stores_sensor)((ListBox)sender).SelectedItem).sensor_id };
-                    var dataAsString = JsonConvert.SerializeObject(queryCondition);
-                    var content = new StringContent(dataAsString);
-                    content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-
-                    var apiResponse = await client.PostAsync($"{webapiUrl}/devicetype", content);
-                    apiResponse.EnsureSuccessStatusCode();
-
-                    var queryResult = (JsonElement)await JsonSerializer.DeserializeAsync<object>(await apiResponse.Content.ReadAsStreamAsync());
-
-                    var resultObj = new List<stores_devicetype>();
-                    for (int i = 0; i < queryResult.GetArrayLength(); i++)
-                        resultObj.Add(JsonConvert.DeserializeObject<stores_devicetype>(queryResult[i].ToString()));
-
-                    deviceTypeList.Clear();
-
-                    resultObj.ForEach(z =>
+                    switch (ConfigurationManager.AppSettings["SensorListSource"])
                     {
-                        deviceTypeList.Add(new stores_devicetype { id = z.id, title = z.title });
-                    });
+                        case "0":
+                            var queryCondition = new QueryConditionDeviceType() { SensorId = ((stores_sensor)((ListBox)sender).SelectedItem).sensor_id };
+                            var dataAsString = JsonConvert.SerializeObject(queryCondition);
+                            var content = new StringContent(dataAsString);
+                            content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
-                    //lbxDevice.ItemsSource = deviceTypeList;
+                            var apiResponse = await client.PostAsync($"{webapiUrl}/devicetype", content);
+                            apiResponse.EnsureSuccessStatusCode();
+
+                            var queryResult = (JsonElement)await JsonSerializer.DeserializeAsync<object>(await apiResponse.Content.ReadAsStreamAsync());
+
+                            var resultObj = new List<stores_devicetype>();
+                            for (int i = 0; i < queryResult.GetArrayLength(); i++)
+                                resultObj.Add(JsonConvert.DeserializeObject<stores_devicetype>(queryResult[i].ToString()));
+
+                            deviceTypeList.Clear();
+
+                            resultObj.ForEach(z =>
+                            {
+                                deviceTypeList.Add(new stores_devicetype { id = z.id, title = z.title });
+                            });
+                            break;
+                        case "1":
+                            FindDeviceBySensorType(((stores_sensor)((ListBox)sender).SelectedItem).sensor_id);
+                            break;
+                    }
+
+                    lbxDevice.ItemsSource = deviceTypeList;
                     #endregion
                     baseGrid.IsEnabled = true;
                 }
@@ -761,6 +940,155 @@ namespace WpfAppNetCore
                 baseGrid.IsEnabled = true;
                 MessageBox.Show(ex.Message);
                 //throw;
+            }
+        }
+
+        private void FindDeviceBySensorType(string sensorId)
+        {
+            deviceTypeList.Clear();
+
+            if (DeviceTypes.ACTRL.sensors.Where(z => z.sensor_id == sensorId).Count() > 0)
+            {
+                if(deviceTypeList.Where(x => x.id == DeviceTypes.ACTRL.id && x.title == DeviceTypes.ACTRL.title).Count() ==0 )
+                    deviceTypeList.Add(new stores_devicetype { id = DeviceTypes.ACTRL.id, title = DeviceTypes.ACTRL.title });
+            }      
+
+            if (DeviceTypes.DAO.sensors.Where(z => z.sensor_id == sensorId).Count() > 0)
+            {
+                if (deviceTypeList.Where(x => x.id == DeviceTypes.DAO.id && x.title == DeviceTypes.DAO.title).Count() == 0)
+                    deviceTypeList.Add(new stores_devicetype { id = DeviceTypes.DAO.id, title = DeviceTypes.DAO.title });
+            }
+
+            if (DeviceTypes.PA33.sensors.Where(z => z.sensor_id == sensorId).Count() > 0)
+            {
+                if (deviceTypeList.Where(x => x.id == DeviceTypes.PA33.id && x.title == DeviceTypes.PA33.title).Count() == 0)
+                    deviceTypeList.Add(new stores_devicetype { id = DeviceTypes.PA33.id, title = DeviceTypes.PA33.title });
+            }
+
+            if (DeviceTypes.TC_2_TEMP.sensors.Where(z => z.sensor_id == sensorId).Count() > 0)
+            {
+                if (deviceTypeList.Where(x => x.id == DeviceTypes.TC_2_TEMP.id && x.title == DeviceTypes.TC_2_TEMP.title).Count() == 0)
+                    deviceTypeList.Add(new stores_devicetype { id = DeviceTypes.TC_2_TEMP.id, title = DeviceTypes.TC_2_TEMP.title });
+            }
+
+            if (DeviceTypes.TC_BENTO.sensors.Where(z => z.sensor_id == sensorId).Count() > 0)
+            {
+                if (deviceTypeList.Where(x => x.id == DeviceTypes.TC_BENTO.id && x.title == DeviceTypes.TC_BENTO.title).Count() == 0)
+                    deviceTypeList.Add(new stores_devicetype { id = DeviceTypes.TC_BENTO.id, title = DeviceTypes.TC_BENTO.title });
+            }
+
+            if (DeviceTypes.TC_BENTO_DESK.sensors.Where(z => z.sensor_id == sensorId).Count() > 0)
+            {
+                if (deviceTypeList.Where(x => x.id == DeviceTypes.TC_BENTO_DESK.id && x.title == DeviceTypes.TC_BENTO_DESK.title).Count() == 0)
+                    deviceTypeList.Add(new stores_devicetype { id = DeviceTypes.TC_BENTO_DESK.id, title = DeviceTypes.TC_BENTO_DESK.title });
+            }
+
+            if (DeviceTypes.TC_CAKE.sensors.Where(z => z.sensor_id == sensorId).Count() > 0)
+            {
+                if (deviceTypeList.Where(x => x.id == DeviceTypes.TC_CAKE.id && x.title == DeviceTypes.TC_CAKE.title).Count() == 0)
+                    deviceTypeList.Add(new stores_devicetype { id = DeviceTypes.TC_CAKE.id, title = DeviceTypes.TC_CAKE.title });
+            }
+
+            if (DeviceTypes.TC_CHILD.sensors.Where(z => z.sensor_id == sensorId).Count() > 0)
+            {
+                if (deviceTypeList.Where(x => x.id == DeviceTypes.TC_CHILD.id && x.title == DeviceTypes.TC_CHILD.title).Count() == 0)
+                    deviceTypeList.Add(new stores_devicetype { id = DeviceTypes.TC_CHILD.id, title = DeviceTypes.TC_CHILD.title });
+            }
+
+            if (DeviceTypes.TC_COFFEE.sensors.Where(z => z.sensor_id == sensorId).Count() > 0)
+            {
+                if (deviceTypeList.Where(x => x.id == DeviceTypes.TC_COFFEE.id && x.title == DeviceTypes.TC_COFFEE.title).Count() == 0)
+                    deviceTypeList.Add(new stores_devicetype { id = DeviceTypes.TC_COFFEE.id, title = DeviceTypes.TC_COFFEE.title });
+            }
+
+            if (DeviceTypes.TC_DRAWER.sensors.Where(z => z.sensor_id == sensorId).Count() > 0)
+            {
+                if (deviceTypeList.Where(x => x.id == DeviceTypes.TC_DRAWER.id && x.title == DeviceTypes.TC_DRAWER.title).Count() == 0)
+                    deviceTypeList.Add(new stores_devicetype { id = DeviceTypes.TC_DRAWER.id, title = DeviceTypes.TC_DRAWER.title });
+            }
+
+            if (DeviceTypes.TC_EC.sensors.Where(z => z.sensor_id == sensorId).Count() > 0)
+            {
+                if (deviceTypeList.Where(x => x.id == DeviceTypes.TC_EC.id && x.title == DeviceTypes.TC_EC.title).Count() == 0)
+                    deviceTypeList.Add(new stores_devicetype { id = DeviceTypes.TC_EC.id, title = DeviceTypes.TC_EC.title });
+            }
+
+            if (DeviceTypes.TC_EC_4C.sensors.Where(z => z.sensor_id == sensorId).Count() > 0)
+            {
+                if (deviceTypeList.Where(x => x.id == DeviceTypes.TC_EC_4C.id && x.title == DeviceTypes.TC_EC_4C.title).Count() == 0)
+                    deviceTypeList.Add(new stores_devicetype { id = DeviceTypes.TC_EC_4C.id, title = DeviceTypes.TC_EC_4C.title });
+            }
+
+            if (DeviceTypes.TC_ICE.sensors.Where(z => z.sensor_id == sensorId).Count() > 0)
+            {
+                if (deviceTypeList.Where(x => x.id == DeviceTypes.TC_ICE.id && x.title == DeviceTypes.TC_ICE.title).Count() == 0)
+                    deviceTypeList.Add(new stores_devicetype { id = DeviceTypes.TC_ICE.id, title = DeviceTypes.TC_ICE.title });
+            }
+
+            if (DeviceTypes.TC_LIGHT_FOOD.sensors.Where(z => z.sensor_id == sensorId).Count() > 0)
+            {
+                if (deviceTypeList.Where(x => x.id == DeviceTypes.TC_LIGHT_FOOD.id && x.title == DeviceTypes.TC_LIGHT_FOOD.title).Count() == 0)
+                    deviceTypeList.Add(new stores_devicetype { id = DeviceTypes.TC_LIGHT_FOOD.id, title = DeviceTypes.TC_LIGHT_FOOD.title });
+            }
+
+            if (DeviceTypes.TC_MILK.sensors.Where(z => z.sensor_id == sensorId).Count() > 0)
+            {
+                if (deviceTypeList.Where(x => x.id == DeviceTypes.TC_MILK.id && x.title == DeviceTypes.TC_MILK.title).Count() == 0)
+                    deviceTypeList.Add(new stores_devicetype { id = DeviceTypes.TC_MILK.id, title = DeviceTypes.TC_MILK.title });
+            }
+
+            if (DeviceTypes.TC_OC.sensors.Where(z => z.sensor_id == sensorId).Count() > 0)
+            {
+                if (deviceTypeList.Where(x => x.id == DeviceTypes.TC_OC.id && x.title == DeviceTypes.TC_OC.title).Count() == 0)
+                    deviceTypeList.Add(new stores_devicetype { id = DeviceTypes.TC_OC.id, title = DeviceTypes.TC_OC.title });
+            }
+
+            if (DeviceTypes.TC_OC18.sensors.Where(z => z.sensor_id == sensorId).Count() > 0)
+            {
+                if (deviceTypeList.Where(x => x.id == DeviceTypes.TC_OC18.id && x.title == DeviceTypes.TC_OC18.title).Count() == 0)
+                    deviceTypeList.Add(new stores_devicetype { id = DeviceTypes.TC_OC18.id, title = DeviceTypes.TC_OC18.title });
+            }
+
+            if (DeviceTypes.TC_RI.sensors.Where(z => z.sensor_id == sensorId).Count() > 0)
+            {
+                if (deviceTypeList.Where(x => x.id == DeviceTypes.TC_RI.id && x.title == DeviceTypes.TC_RI.title).Count() == 0)
+                    deviceTypeList.Add(new stores_devicetype { id = DeviceTypes.TC_RI.id, title = DeviceTypes.TC_RI.title });
+            }
+
+            if (DeviceTypes.TC_RI_4C.sensors.Where(z => z.sensor_id == sensorId).Count() > 0)
+            {
+                if (deviceTypeList.Where(x => x.id == DeviceTypes.TC_RI_4C.id && x.title == DeviceTypes.TC_RI_4C.title).Count() == 0)
+                    deviceTypeList.Add(new stores_devicetype { id = DeviceTypes.TC_RI_4C.id, title = DeviceTypes.TC_RI_4C.title });
+            }
+
+            if (DeviceTypes.TC_SWEET_18C.sensors.Where(z => z.sensor_id == sensorId).Count() > 0)
+            {
+                if (deviceTypeList.Where(x => x.id == DeviceTypes.TC_SWEET_18C.id && x.title == DeviceTypes.TC_SWEET_18C.title).Count() == 0)
+                    deviceTypeList.Add(new stores_devicetype { id = DeviceTypes.TC_SWEET_18C.id, title = DeviceTypes.TC_SWEET_18C.title });
+            }
+
+            if (DeviceTypes.TC_SWEET_4C.sensors.Where(z => z.sensor_id == sensorId).Count() > 0)
+            {
+                if (deviceTypeList.Where(x => x.id == DeviceTypes.TC_SWEET_4C.id && x.title == DeviceTypes.TC_SWEET_4C.title).Count() == 0)
+                    deviceTypeList.Add(new stores_devicetype { id = DeviceTypes.TC_SWEET_4C.id, title = DeviceTypes.TC_SWEET_4C.title });
+            }
+
+            if (DeviceTypes.TC_WI.sensors.Where(z => z.sensor_id == sensorId).Count() > 0)
+            {
+                if (deviceTypeList.Where(x => x.id == DeviceTypes.TC_WI.id && x.title == DeviceTypes.TC_WI.title).Count() == 0)
+                    deviceTypeList.Add(new stores_devicetype { id = DeviceTypes.TC_WI.id, title = DeviceTypes.TC_WI.title });
+            }
+
+            if (DeviceTypes.TC_WORK_4C.sensors.Where(z => z.sensor_id == sensorId).Count() > 0)
+            {
+                if (deviceTypeList.Where(x => x.id == DeviceTypes.TC_WORK_4C.id && x.title == DeviceTypes.TC_WORK_4C.title).Count() == 0)
+                    deviceTypeList.Add(new stores_devicetype { id = DeviceTypes.TC_WORK_4C.id, title = DeviceTypes.TC_WORK_4C.title });
+            }
+
+            if (DeviceTypes.TC_WORK_ICE.sensors.Where(z => z.sensor_id == sensorId).Count() > 0)
+            {
+                if (deviceTypeList.Where(x => x.id == DeviceTypes.TC_WORK_ICE.id && x.title == DeviceTypes.TC_WORK_ICE.title).Count() == 0)
+                    deviceTypeList.Add(new stores_devicetype { id = DeviceTypes.TC_WORK_ICE.id, title = DeviceTypes.TC_WORK_ICE.title });
             }
         }
 
